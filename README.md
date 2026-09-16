@@ -1,42 +1,44 @@
-# Project 4: Security Monitoring and SIEM Log Analysis Lab
+## Incident Response Recommendations
 
-## Project Overview
+### Alert 1: Possible Brute-Force Activity
 
-This project demonstrates a basic Security Information and Event Management (SIEM) workflow using Python and simulated authentication logs.
+Source IP: 192.168.1.50  
+Severity: HIGH
 
-The project analyzes login activity, identifies repeated failed login attempts, detects possible brute-force behavior, and generates a security assessment report with severity levels.
+Recommended actions:
 
-## Objectives
+1. Investigate the source IP address.
+2. Review the related authentication logs.
+3. Check whether any login was successful after repeated failures.
+4. Temporarily block the suspicious IP if confirmed malicious.
+5. Reset affected user passwords if necessary.
+6. Continue monitoring for additional login attempts.
 
-- Analyze authentication logs
-- Count failed and successful login attempts
-- Identify suspicious IP addresses
-- Detect possible brute-force activity
-- Generate a security monitoring report
-- Understand the basic SIEM investigation process
+### Alert 2: Multiple Failed Logins
 
-## Tools and Technologies
+Source IP: 192.168.1.60  
+Severity: MEDIUM
 
-- Kali Linux
-- Python 3
-- Linux Authentication Logs
-- SIEM Concepts
-- Log Analysis
-- VMware
+Recommended actions:
 
-## Project Structure
+1. Review the failed login events.
+2. Confirm whether the attempts target the root account.
+3. Check the time and frequency of the attempts.
+4. Investigate the source system.
+5. Monitor for repeated activity.
+
+## SIEM Workflow
 
 ```text
-Project4-SIEM-Lab/
-│
-├── logs/
-│   └── auth.log
-│
-├── reports/
-│   └── security_report.txt
-│
-├── screenshots/
-│
-├── siem_detector.py
-│
-└── README.md
+Log Collection
+      ↓
+Log Analysis
+      ↓
+Suspicious Activity Detection
+      ↓
+Alert Severity Classification
+      ↓
+Incident Investigation
+      ↓
+Response Recommendations
+
