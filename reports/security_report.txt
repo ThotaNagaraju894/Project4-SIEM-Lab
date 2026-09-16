@@ -1,0 +1,11 @@
+===== SIEM Security Log Report =====
+Total failed logins: 5
+Total successful logins: 1
+
+Failed login attempts by IP:
+192.168.1.50: 3 attempts
+192.168.1.60: 2 attempts
+
+Security Assessment:
+[HIGH] Possible brute-force activity from 192.168.1.50
+[MEDIUM] Multiple failed logins from 192.168.1.60
